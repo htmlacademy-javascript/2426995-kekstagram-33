@@ -1,39 +1,25 @@
-
-let chekLine20 = 0;
-let chekLine18 = 0;
-let chekLine10 = 0;
-
+function checkStringLength(textToValidate, maxLength) {
+  return textToValidate.length <= maxLength;
+}
 // Строка короче 20 символов
-chekLine20 () {
-if (chekLine20 <= 20){
-  chekLine20 = true
-
-}
-else {  chekLine20 = false
-
-}
-}; // true ('проверяемая строка', 20)
-
-
+checkStringLength('проверяемая строка', 20); // true
 // Длина строки ровно 18 символов
-chekLine18 () {
-  if (chekLine18 <= 18){
-    chekLine18 = true
-
-  }
-  else {  chekLine18 = false
-
-  }};
-имяФункции('проверяемая строка', 18); // true
-
-
+checkStringLength('проверяемая строка', 18); // true
 // Строка длиннее 10 символов
-chekLine10 () {
-  if (chekLine10 <= 10){
-    chekLine10 = true
+checkStringLength('проверяемая строка', 10); // false
 
-  }
-  else {  chekLine10 = false
+function isPalindrom(string){
+  const cleaned = string.toLowerCase().replaceAll(' ', '');
 
-  }};
-имяФункции('проверяемая строка', 10); // false
+  const reversed = cleaned.splint('').reversed().join('');
+
+  return cleaned === reversed;
+}
+
+// Строка является палиндромом
+isPalindrom('топот'); // true
+// Несмотря на разный регистр, тоже палиндром
+isPalindrom('ДовОд'); // true
+// Это не палиндром
+isPalindrom('Кекс'); // false
+isPalindrom('Лёша на полке клопа нашёл '); // true
